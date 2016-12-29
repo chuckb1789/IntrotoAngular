@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app='button'>
+  <head>
+    <meta charset="utf-8">
+    <title>Button Exercise</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js"></script>
+    <script src="./main.js"></script>
+  </head>
+  <body ng-controller='myButton as myBtn'>
+      <div>
+          <button ng-click='myBtn.mainButton()'>Click for more info</button>
+          <button ng-click='myBtn.mainButton2()'>Click?</button>
+          <h1> {{myBtn.click}} </h1>
+      </div>
+      <div>
+          <button ng-click='myList = !myList'>List?</button>
+          <ul ng-show='myList'>
+            <li ng-repeat='candy in myBtn.candy'>{{candy}}</li>
+          </ul>
+      </div>
+  </body>
+</html>
