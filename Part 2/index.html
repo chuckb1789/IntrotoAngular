@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app='coloradoTrail'>
+<head>
+    <meta charset="utf-8">
+    <title>Colorado Trail</title>
+    <script src=https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js></script>
+    <script src="./main.js"></script>
+    <link rel='stylesheet' type='text/css' href="./main.css">
+  </head>
+  <body>
+      <div ng-controller="coloradoController as hikeCtl">
+        <h1 ng-mouseover="hikeCtl.hoverIn()" ng-mouseleave="hikeCtl.hoverOut()">The Colorado Trail{{hikeCtl.title}}</h1>
+            <p ng-class="{pink: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">The Colorado Trail is divided into <a href="http://www.coloradotrail.org/segments.html">28 segments</a>. If you are planning an excursion on The Colorado Trail, we recommend that you utilize one or more of the following:</p>
+      </div>
+                <ul ng-controller="leavePageController as linkCtl">
+                    <li> <a ng-click='linkCtl.clickLink()' href="http://www.shop.coloradotrail.org/Official-CT-Guidebook-9th-Edition-GUIDE9.htm" target="_blank" ng-show='linkCtl.link'>The Official Guidebook of The Colorado Trail Foundation</a></li>
+                    <li> <a ng-click='linkCtl.clickLink2()' href="http://shop.coloradotrail.org/Colorado-Trail-Map-Book-MAPBOOK.htm" target="_blank" ng-show='linkCtl.link2'>Spiral-bound Topo Maps</a></li>
+                </ul>
+            <p ng-class="{blue: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">Below are maps of The Colorado Trail to give you a feel for the Trail's general location. Click on the maps to view larger versions of the maps. Below the map are links to additional trip planning resources.</p>
+  </body>
+</html>
