@@ -1,0 +1,10 @@
+.divbutton {
+  text-align: center;
+}
+.button {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: rgb(76,187,23);
+  font-size: 30pt;
+}

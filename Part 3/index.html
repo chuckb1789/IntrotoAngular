@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='buttonApp'>
   <head>
     <meta charset="utf-8">
-    <title>Colorado Trail</title>
+    <title>Button</title>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js></script>
-    <script src="./main.js"></script>
+    <script src="main.js"></script>
+    <script src='ModalController.js'></script>
     <link rel='stylesheet' type='text/css' href="./main.css">
   </head>
   <body>
-
+      <div class=divbutton ng-controller="buttonController as btnCtl">
+          <button ng-controller="CustomController" class='button' type="button" ng-click="btnCtl.popup()">TAKE A JOURNEY!</button>
+      </div>
   </body>
 </html>
