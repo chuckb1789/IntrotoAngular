@@ -1,5 +1,5 @@
-angular.module('buttonApp')
-       .controller('CustomController', ['btnCtl', 'close', function (btnCtl, close) {
+angular.module('buttonApp', [])
+       .controller('btnCtl', [btnCtl, 'close', function (btnCtl, close) {
 
 btnCtl.close = close;
 

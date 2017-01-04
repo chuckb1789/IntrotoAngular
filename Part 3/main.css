@@ -1,10 +1,24 @@
-.divbutton {
-  text-align: center;
-}
-.button {
+#button {
   position: relative;
+  text-align: center;
+  left: 33vw;
+  right: 33vw;
+  top: 20vh;
+  height: 500px;
+  width: 500px;
+  background-color: rgb(76,187,23);
+  font-size: 30pt;
+}
+
+#popup {
+  position: absolute;
+  text-align: center;
+  left: 33vw;
+  right: 33vw;
+  top: 20vh;
   height: 400px;
   width: 400px;
   background-color: rgb(76,187,23);
   font-size: 30pt;
+  border: 16px solid black;
 }

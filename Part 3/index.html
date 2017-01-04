@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>Button</title>
     <script src=https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.js></script>
-    <script src="main.js"></script>
-    <script src='ModalController.js'></script>
     <link rel='stylesheet' type='text/css' href="./main.css">
   </head>
-  <body>
-      <div class=divbutton ng-controller="buttonController as btnCtl">
-          <button ng-controller="CustomController" class='button' type="button" ng-click="btnCtl.popup()">TAKE A JOURNEY!</button>
-      </div>
+  <body ng-controller="buttonController as btnCtl">
+          <div>
+                <button id='button' ng-click="btnCtl.reveal()">Click Here!</button>
+          </div>
+          <div id="popup" ng-show="btnCtl.clicked">
+              <h3>YOU ARE LOOKING AT THE POPUP</h3>
+                <button ng-show="btnCtl.clicked" ng-click="btnCtl.hide()">close</button>
+          </div>
+  <script src="main.js"></script>
   </body>
 </html>

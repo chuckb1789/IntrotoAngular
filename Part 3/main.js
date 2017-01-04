@@ -1,18 +1,17 @@
 angular.module('buttonApp', [])
-       .controller('buttonController', buttonTrail)
+       .controller('buttonController', buttonFunction)
 
-function buttonTrail () {
+function buttonFunction() {
   var btnCtl = this;
 
-  btnCtl.customResult=null;
+  btnCtl.clicked = false;
 
-  btnCtl.showModal({
-      templateUrl: "customModal.html",
-      // controller: "CustomController"
-      }).then(function(modal) {
-        modal.close.then(function(result) {
-        btnCtl.customResult = "All good!";
-        });
-      });
+  btnCtl.reveal = function(){
+    btnCtl.clicked = true;
+    console.log ('clicked');
+  }
 
-    };
+  btnCtl.hide = function(){
+    btnCtl.clicked = false;
+  }
+}
